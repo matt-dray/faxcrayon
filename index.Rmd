@@ -1,0 +1,186 @@
+---
+output:
+  html_document:
+    theme:
+      version: 4
+---
+
+```{css, echo=FALSE}
+/* vt323-regular - latin */
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/vt323-v12-latin-regular.eot');
+  src: local(''),
+       url('fonts/vt323-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/vt323-v12-latin-regular.woff2') format('woff2'),
+       url('fonts/vt323-v12-latin-regular.woff') format('woff'),
+       url('fonts/vt323-v12-latin-regular.ttf') format('truetype'),
+       url('fonts/vt323-v12-latin-regular.svg#VT323') format('svg');
+}
+
+
+* { font-family: 'VT323'; }
+```
+
+```{r setup, echo=FALSE}
+library(bs4cards)
+```
+
+<center>
+  <p style=font-size:100px;">`r emo::ji("fax")``r emo::ji("crayon")`</p> 
+  Recreational aRt by [Matt Dray](https://www.matt-dray.com)
+</center>
+
+```{r card-groups, include=FALSE}
+kierisi <- list(
+  card(
+    title = "Kierisi 0",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-07-08_twitter_kierisi/output/kierisi-recreate.png",
+    text = "Recreation",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-08_twitter_kierisi",
+    header = "2021-07-08"
+  )
+)
+
+lewitt <- list(
+  
+  card(
+    title = "LeWitt 1",
+    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/concentric-circles-1.png",
+    text = "Principle",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
+    header = "2021-07-01"
+  ),
+  
+  card(
+    title = "LeWitt 2",
+    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/single-panel-triangles-1.png",
+    text = "Remix",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
+    header = "2021-07-01"
+  ),
+  
+  card(
+    title = "LeWitt 3",
+    image = "https://camo.githubusercontent.com/7e87fdd8c89d6f14cc0012190a0ee58a0b6f50d04d4af6b97382e5b46767a1ec/68747470733a2f2f7777772e726f737472756d2e626c6f672f706f73742f323032312d30372d30352d72656372656174652d6c65776974745f66696c65732f6669677572652d68746d6c2f6578616d706c652d31302d312d302d312e706e67",
+    text = "Remix",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
+    header = "2021-07-01"
+  ),
+  
+  card(
+    title = "LeWitt 4",
+    image = "https://camo.githubusercontent.com/c7392c62313c695c33046485091da7df4de3332b6bb986cebe3abc8481c89db3/68747470733a2f2f7777772e726f737472756d2e626c6f672f706f73742f323032312d30372d30352d72656372656174652d6c65776974745f66696c65732f6669677572652d68746d6c2f6578616d706c652d322d342d31302d312e706e67",
+    text = "Remix",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
+    header = "2021-07-01"
+  ),
+  
+  card(
+    title = "LeWitt 5",
+    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-2-20-0-1.png",
+    text = "Remix",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
+    header = "2021-07-01"
+  ),
+  
+  card(
+    title = "LeWitt 6",
+    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-10-1-20-1.png",
+    text = "Remix",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
+    header = "2021-07-01"
+  ),
+  
+  card(
+    title = "LeWitt 7",
+    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-2-0.4-0-1.png",
+    text = "Remix",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
+    header = "2021-07-01"
+  )
+  
+)
+
+link <- list(
+  card(
+    title = "Link 0",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-28_pixel-art_various/output/link-recreate.gif",
+    text = "Recreation",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-28_pixel-art_various",
+    header = "2021-06-28"
+  )
+)
+
+spear <- list(
+  card(
+    title = "Spear 0",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/cottonviz-recreate.png",
+    text = "Recreation",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
+    header = "2021-06-08"
+  ),
+  
+  card(
+    title = "Spear 1",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/gif/recreate-cottonviz.gif",
+    text = "Recreation",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
+    header = "2021-06-08"
+  ),
+  
+    card(
+    title = "Spear 2",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/cottonviz-remix-neg.png",
+    text = "Remix",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
+    header = "2021-06-08"
+  )
+  
+)
+
+hlito <- list(
+  card(
+    title = "Hlito 0",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/recreate-hlito.png",
+    text = "Recreation",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-03_rt_hlito",
+    header = "2021-06-03"
+  ),
+  
+  card(
+    title = "Hlito 1",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/remix-hlito-100.png",
+    text = "Remix",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-03_rt_hlito",
+    header = "2021-06-03"
+  ),
+  
+  card(
+    title = "Hlito 2",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/gif/remix-hlito_max.gif",
+    text = "Remix",
+        link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-03_rt_hlito",
+    header = "2021-06-03"
+  )
+  
+)
+```
+
+```{r card-place, echo=FALSE}
+card_list <- c(
+  kierisi,
+  lewitt,
+  link,
+  spear,
+  hlito
+)
+
+card_grid(card_list)
+```
+
+<center>
+  `r emo::ji("page_facing_up")` [RMarkdown](https://rmarkdown.rstudio.com/) `r emo::ji("card_file_box")` [{bs4cards}](https://bs4cards.djnavarro.net/index.html) `r emo::ji("abc")` [VT323](https://fonts.google.com/specimen/VT323?category=Monospace&preview.text=Hlito%20Kierisi%20faxcrayon&preview.text_type=custom)
+</center>
