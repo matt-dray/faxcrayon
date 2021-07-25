@@ -1,5 +1,5 @@
 ---
-title: "faxcrayon.art \n`r emo::ji('fax')``r emo::ji('crayon')`"
+title: "faxcrayon<br>dot art<br>`r emo::ji('fax')``r emo::ji('crayon')`"
 output:
   html_document:
     theme:
@@ -8,18 +8,18 @@ output:
 
 ```{css, echo=FALSE}
 /* bungee-hairline-regular - latin */
-@font-face {
-  font-family: 'Bungee Hairline';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/bungee-hairline-v8-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('fonts/bungee-hairline-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/bungee-hairline-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/bungee-hairline-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('fonts/bungee-hairline-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/bungee-hairline-v8-latin-regular.svg#BungeeHairline') format('svg'); /* Legacy iOS */
-}
+  @font-face {
+    font-family: 'Bungee Hairline';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/bungee-hairline-v8-latin-regular.eot'); /* IE9 Compat Modes */
+      src: local(''),
+    url('fonts/bungee-hairline-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('fonts/bungee-hairline-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+      url('fonts/bungee-hairline-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+      url('fonts/bungee-hairline-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('fonts/bungee-hairline-v8-latin-regular.svg#BungeeHairline') format('svg'); /* Legacy iOS */
+  }
 
 * { font-family: 'Bungee Hairline'; }
 
@@ -32,26 +32,29 @@ h1, h2, h3, h4, h5, h6, p {
 library(bs4cards)
 ```
 
----
-
 <center>
-  <p>Recreational 'art' by [Matt Dray](https://www.matt-dray.com) made with [R](https://www.r-project.org/about.html) `r emo::ji("man_technologist")``</p>
-  <p>[RMarkdown](https://rmarkdown.rstudio.com/) `r emo::ji("page_facing_up")` [{bs4cards}](https://bs4cards.djnavarro.net/index.html) `r emo::ji("card_file_box")` [Bungee](https://fonts.google.com/specimen/Bungee+Hairline?category=Display&preview.text=faxcrayon.art&preview.text_type=custom) `r emo::ji("abc")` [Pages](https://pages.github.com/) `r emo::ji("computer_disk")`</p>
-<p>[Source](https://www.github.com/matt-dray/faxcrayon) `r emo::ji("floppy")`</center>
+<p>Recreational 'art' by [Matt Dray](https://www.matt-dray.com) made with [R](https://www.r-project.org/about.html)</p>
+<p>[Source](https://www.github.com/matt-dray/faxcrayon) | [RMarkdown](https://rmarkdown.rstudio.com/) | [{bs4cards}](https://bs4cards.djnavarro.net/index.html) | [Bungee](https://fonts.google.com/specimen/Bungee+Hairline?category=Display&preview.text=faxcrayon.art&preview.text_type=custom) | [Pages](https://pages.github.com/)</p>
 </center>
 
 ```{r card-groups, include=FALSE}
 lmb_colours <- list(
   card(
     title = "londonmapbot 1",
-    image = "https://www.rostrum.blog/post/2021-07-23-london-colour_files/figure-html/mosaic-random-1.png",
+    image = card_image(
+      "https://www.rostrum.blog/post/2021-07-23-london-colour_files/figure-html/mosaic-random-1.png",
+      alt = "A 25 by 25 grid of squares, each of which represents a random satellite image of Greater London that's been quantized to show one representative colour. This has resulted in various shades of grey, green and cream, depending on factors like urbanness and green space in the original satellite image. The arrangement of colours appears to be random.",
+    ),
     text = "Original",
     link = "https://www.rostrum.blog/2021/07/23/london-colour/",
     header = "2021-07-24"
   ),
-    card(
+  card(
     title = "londonmapbot 2",
-    image = "https://www.rostrum.blog/post/2021-07-23-london-colour_files/figure-html/mosaic-col-1.png",
+    image = card_image(
+      "https://www.rostrum.blog/post/2021-07-23-london-colour_files/figure-html/mosaic-col-1.png",
+      alt = "A 25 by 25 grid of squares, each of which represents a random satellite image of Greater London that's been quantized to show one representative colour. This has resulted in various shades of grey, green and cream, depending on factors like urbanness and green space in the original satellite image. The squares are ordered form brightest in the top-left to darkest in the lower-right."
+    ),
     text = "Original",
     link = "https://www.rostrum.blog/2021/07/23/london-colour/",
     header = "2021-07-24"
@@ -61,7 +64,10 @@ lmb_colours <- list(
 kierisi <- list(
   card(
     title = "Kierisi 1",
-    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-07-08_twitter_kierisi/output/kierisi-recreate.png",
+    image = card_image(
+      "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-07-08_twitter_kierisi/output/kierisi-recreate.png",
+      alt = "A composition of squares in a staggered cross shape, composed of coloured squares of four colours—a grey, a blue-grey, an orange and a yellow (colours approximate, since I'm colourblind)—on a white background."
+    ),
     text = "Recreation",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-08_twitter_kierisi",
     header = "2021-07-08"
@@ -72,7 +78,10 @@ lewitt <- list(
   
   card(
     title = "LeWitt 1",
-    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/concentric-circles-1.png",
+    image = card_image(
+      "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/concentric-circles-1.png",
+      alt = "Concentric circles coloured consecutively with colours of the rainbow."
+    ),
     text = "Original",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
     header = "2021-07-01"
@@ -80,7 +89,10 @@ lewitt <- list(
   
   card(
     title = "LeWitt 2",
-    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/single-panel-triangles-1.png",
+    image = card_image(
+      "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/single-panel-triangles-1.png",
+      alt = "A square image with a black border that contains concentric triangles coloured consecutively with rainbow colours."
+    ),
     text = "Remix",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
     header = "2021-07-01"
@@ -88,7 +100,10 @@ lewitt <- list(
   
   card(
     title = "LeWitt 3",
-    image = "https://camo.githubusercontent.com/7e87fdd8c89d6f14cc0012190a0ee58a0b6f50d04d4af6b97382e5b46767a1ec/68747470733a2f2f7777772e726f737472756d2e626c6f672f706f73742f323032312d30372d30352d72656372656174652d6c65776974745f66696c65732f6669677572652d68746d6c2f6578616d706c652d31302d312d302d312e706e67",
+    image = card_image(
+      "https://camo.githubusercontent.com/7e87fdd8c89d6f14cc0012190a0ee58a0b6f50d04d4af6b97382e5b46767a1ec/68747470733a2f2f7777772e726f737472756d2e626c6f672f706f73742f323032312d30372d30352d72656372656174652d6c65776974745f66696c65732f6669677572652d68746d6c2f6578616d706c652d31302d312d302d312e706e67",
+      alt = "A square image containing 100 panels in a 10 by 10 grid. Each panel contains concentric patterns of squares, triangles or circles with an alternating randomised colour palette. There are no borders around each panel."
+    ),
     text = "Remix",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
     header = "2021-07-01"
@@ -96,7 +111,10 @@ lewitt <- list(
   
   card(
     title = "LeWitt 4",
-    image = "https://camo.githubusercontent.com/c7392c62313c695c33046485091da7df4de3332b6bb986cebe3abc8481c89db3/68747470733a2f2f7777772e726f737472756d2e626c6f672f706f73742f323032312d30372d30352d72656372656174652d6c65776974745f66696c65732f6669677572652d68746d6c2f6578616d706c652d322d342d31302d312e706e67",
+    image = card_image(
+      "https://camo.githubusercontent.com/c7392c62313c695c33046485091da7df4de3332b6bb986cebe3abc8481c89db3/68747470733a2f2f7777772e726f737472756d2e626c6f672f706f73742f323032312d30372d30352d72656372656174652d6c65776974745f66696c65732f6669677572652d68746d6c2f6578616d706c652d322d342d31302d312e706e67",
+      alt = "A square image containing four panels in a two by two grid. Each panel contains concentric patterns of squares, triangles or circles with an alternating randomised colour palette. Each panel has a thick black border around it."
+    ),
     text = "Remix",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
     header = "2021-07-01"
@@ -104,7 +122,10 @@ lewitt <- list(
   
   card(
     title = "LeWitt 5",
-    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-2-20-0-1.png",
+    image = card_image(
+    "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-2-20-0-1.png",
+    alt = "A square image containing four panels in a two by two grid. Each panel contains concentric patterns of squares, triangles or circles with an alternating randomised colour palette. The lines created by the concentric shapes appear thick. There are no borders around each panel."
+    ),
     text = "Remix",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
     header = "2021-07-01"
@@ -112,7 +133,10 @@ lewitt <- list(
   
   card(
     title = "LeWitt 6",
-    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-10-1-20-1.png",
+    image = card_image(
+      "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-10-1-20-1.png",
+      alt = "A square image containing 100 panels in a 10 by 10 grid. Each panel contains concentric patterns of squares, triangles or circles with an alternating randomised colour palette. The lines created by the concentric shapes appear thin. There are extremely thick black borders around each panel."
+    ),
     text = "Remix",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
     header = "2021-07-01"
@@ -120,7 +144,10 @@ lewitt <- list(
   
   card(
     title = "LeWitt 7",
-    image = "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-2-0.4-0-1.png",
+    image = card_image(
+      "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-2-0.4-0-1.png",
+      alt = "A square image containing four panels in a two by two grid. Each panel contains concentric patterns of squares or circles with an alternating randomised colour palette. The lines created by the concentric shapes appear extremely thin. There are no borders around the panels. The patterns give a slight impression of motion, liek a moiré pattern."
+    ),
     text = "Remix",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
     header = "2021-07-01"
@@ -131,7 +158,10 @@ lewitt <- list(
 link <- list(
   card(
     title = "Link 1",
-    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-28_pixel-art_various/output/link-recreate.gif",
+    image = card_image(
+      "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-28_pixel-art_various/output/link-recreate.gif",
+      alt = "A two-frame walk-cycle animation of the 16 by 16 sprite of the character Link from The Legend of Zelda on the Nintendo Enterntainment System."
+    ),
     text = "Recreation",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-28_pixel-art_various",
     header = "2021-06-28"
@@ -168,7 +198,10 @@ link <- list(
 hlito <- list(
   card(
     title = "Hlito 1",
-    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/recreate-hlito.png",
+    image = card_image(
+      "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/recreate-hlito.png",
+      alt = "A recreation of Curves and Straight Lines (1948) by Alfred Hlito, which is an oil painting of colorful geometric lines on a cream background. Starting at the top of the painting in the middle there is a dark yellow curve. Intersecting it in the center of the painting is a black line at a 45 degree angle and a dark blue curve. In the top right of the center area there are short horizontal black blue green and red lines. In the top left of the center area are horizontal green red blue and black lines. In the bottom left of the center there is a short horizontal red line."
+    ),
     text = "Recreation",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-03_rt_hlito",
     header = "2021-06-03"
@@ -176,7 +209,10 @@ hlito <- list(
   
   card(
     title = "Hlito 2",
-    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/remix-hlito-100.png",
+    image = card_image(
+      "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/remix-hlito-100.png",
+      alt = "A recreation of Curves and Straight Lines (1948) by Alfred Hlito. This version is a 10 by 10 grid of reproductions of Hlito's original, where randomisation has been introduced into each panel to vary the length and placement of the elements: a horizontal black stripe, several short horizontal lines of various colours and two circles, one blue, one dark yellow; all on a cream background."
+    ),
     text = "Remix",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-03_rt_hlito",
     header = "2021-06-03"
@@ -184,9 +220,12 @@ hlito <- list(
   
   card(
     title = "Hlito 3",
-    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/gif/remix-hlito_max.gif",
+    image = card_image(
+      "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-03_rt_hlito/output/gif/remix-hlito_max.gif",
+      alt = "A recreation of Curves and Straight Lines (1948) by Alfred Hlito. This version is an animated gif where each frame is a new veresion of Hlito's original with randomisation that varies the length and placement of the elements: a horizontal black stripe, several short horizontal lines of various colours and two circles, one blue, one dark yellow; all on a cream background."
+    ),
     text = "Remix",
-        link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-03_rt_hlito",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-03_rt_hlito",
     header = "2021-06-03"
   )
   
@@ -206,4 +245,4 @@ card_list <- c(
 card_grid(card_list)
 ```
 
-<center>'Art is a lie, nothing is real'</center>
+<center>['art is dead.'](https://www.youtube.com/watch?v=Eo9pU1q8sy8)</center>
