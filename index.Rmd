@@ -38,6 +38,19 @@ library(bs4cards)
 </center>
 
 ```{r card-groups, include=FALSE}
+softbank_emoji <- list(
+  card(
+    title = "SoftBank 1",
+    image = card_image(
+      "https://www.rostrum.blog/post/2021-07-31-og-emoji-svg_files/emoji-grid.png",
+      alt = "A 10 by 9 grid of pixelated emojis coloured with random rainbow colours. Examples include a cat face, a fax machine and thumbs up."
+    ),
+    text = "Recreation",
+    link = "https://www.rostrum.blog/2021/07/31/og-emoji-svg/",
+    header = "2021-07-31"
+  )
+)
+
 lmb_colours <- list(
   card(
     title = "londonmapbot 1",
@@ -168,32 +181,32 @@ link <- list(
   )
 )
 
-# spear <- list(
-#   card(
-#     title = "Spear 0",
-#     image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/cottonviz-recreate.png",
-#     text = "Recreation",
-#     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
-#     header = "2021-06-08"
-#   ),
-#   
-#   card(
-#     title = "Spear 1",
-#     image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/gif/recreate-cottonviz.gif",
-#     text = "Recreation",
-#     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
-#     header = "2021-06-08"
-#   ),
-#   
-#     card(
-#     title = "Spear 2",
-#     image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/cottonviz-remix-neg.png",
-#     text = "Remix",
-#     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
-#     header = "2021-06-08"
-#   )
-#   
-# )
+spear <- list(
+  # card(
+  #   title = "Spear 1",
+  #   image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/cottonviz-recreate.png",
+  #   text = "Recreation",
+  #   link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
+  #   header = "2021-06-08"
+  # ),
+
+  card(
+    title = "Spear 2",
+    image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/gif/recreate-cottonviz.gif",
+    text = "Recreation",
+    link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
+    header = "2021-06-08"
+  )#,
+
+  #   card(
+  #   title = "Spear 3",
+  #   image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/cottonviz-remix-neg.png",
+  #   text = "Remix",
+  #   link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
+  #   header = "2021-06-08"
+  # )
+
+)
 
 hlito <- list(
   card(
@@ -234,11 +247,12 @@ hlito <- list(
 
 ```{r card-place, echo=FALSE}
 card_list <- c(
+  softbank_emoji,
   lmb_colours,
   kierisi,
   lewitt,
   link,
-  # spear,
+  spear,
   hlito
 )
 
