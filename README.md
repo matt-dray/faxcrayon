@@ -10,4 +10,6 @@ Source for the single-webpage gallery [faxcrayon.art](https://www.faxcrayon.art)
 
 It hosts recreations and corruptions of artists' visions, plus occasional original pieces. All are made exclusively with the R programming language.
 
+Source code for most of these can be found in the repo [matt-dray/viz-recreation](https://github.com/matt-dray/viz-recreation) or on [rostrum.blog](https://www.rostrum.blog/).
+
 The cards on the webpage were created using [the {bs4cards} package](https://bs4cards.djnavarro.net/articles/introduction.html) by [Danielle Navarro](https://djnavarro.net/).
