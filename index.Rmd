@@ -8,18 +8,18 @@ output:
 
 ```{css, echo=FALSE}
 /* courier-prime-regular - latin */
-@font-face {
-  font-family: 'Courier Prime';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/courier-prime-v2-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('fonts/courier-prime-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/courier-prime-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/courier-prime-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('fonts/courier-prime-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/courier-prime-v2-latin-regular.svg#CourierPrime') format('svg'); /* Legacy iOS */
-}
+  @font-face {
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/courier-prime-v2-latin-regular.eot'); /* IE9 Compat Modes */
+      src: local(''),
+    url('fonts/courier-prime-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('fonts/courier-prime-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+      url('fonts/courier-prime-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+      url('fonts/courier-prime-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('fonts/courier-prime-v2-latin-regular.svg#CourierPrime') format('svg'); /* Legacy iOS */
+  }
 
 * { font-family: 'Courier Prime'; }
 
@@ -38,6 +38,39 @@ library(bs4cards)
 </center>
 
 ```{r card-groups, include=FALSE}
+squarnicode_emoji <- list(
+  card(
+    title = "Squarnicode 1",
+    image = card_image(
+      "img/2021-08-19_squarnicode_quadrants.png",
+      alt = "A 10-by-10 grid composed of randomly-multicoloured icons selected randomly form a set of unicode characters that are rectangular blocks with each permutation of filled and unfilled quadrants."
+    ),
+    text = "Original",
+    link = "https://gist.github.com/matt-dray/a491a3af1a1b359439947ced07e52fab",
+    header = "2021-08-19"
+  ),
+  card(
+    title = "Squarnicode 2",
+    image = card_image(
+      "img/2021-08-19_squarnicode_crosses.png",
+      alt = "A 10-by-10 grid composed of randomly-multicoloured icons selected randomly form a set of unicode characters that are variants of a cross that has thickened pairs of adjacent arms."
+    ),
+    text = "Original",
+    link = "https://gist.github.com/matt-dray/a491a3af1a1b359439947ced07e52fab",
+    header = "2021-08-19"
+  ),
+  card(
+    title = "Squarnicode 3",
+    image = card_image(
+      "img/2021-08-19_squarnicode_triangles.png",
+      alt = "A 10-by-10 grid composed of randomly-multicoloured icons selected randomly form a set of unicode characters that are right-angled triangles whose right-angle points to one of the four corners of a square."
+    ),
+    text = "Original",
+    link = "https://gist.github.com/matt-dray/a491a3af1a1b359439947ced07e52fab",
+    header = "2021-08-19"
+  )
+)
+
 softbank_emoji <- list(
   card(
     title = "SoftBank 1",
@@ -136,8 +169,8 @@ lewitt <- list(
   card(
     title = "LeWitt 5",
     image = card_image(
-    "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-2-20-0-1.png",
-    alt = "A square image containing four panels in a two by two grid. Each panel contains concentric patterns of squares, triangles or circles with an alternating randomised colour palette. The lines created by the concentric shapes appear thick. There are no borders around each panel."
+      "https://www.rostrum.blog/post/2021-07-05-recreate-lewitt_files/figure-html/example-2-20-0-1.png",
+      alt = "A square image containing four panels in a two by two grid. Each panel contains concentric patterns of squares, triangles or circles with an alternating randomised colour palette. The lines created by the concentric shapes appear thick. There are no borders around each panel."
     ),
     text = "Remix",
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-07-01_rt_lewitt",
@@ -189,7 +222,7 @@ spear <- list(
   #   link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
   #   header = "2021-06-08"
   # ),
-
+  
   card(
     title = "Spear 2",
     image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/gif/recreate-cottonviz.gif",
@@ -197,7 +230,7 @@ spear <- list(
     link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
     header = "2021-06-08"
   )#,
-
+  
   #   card(
   #   title = "Spear 3",
   #   image = "https://raw.githubusercontent.com/matt-dray/viz-recreation/main/2021-06-08_cottonviz_spear/output/cottonviz-remix-neg.png",
@@ -205,7 +238,7 @@ spear <- list(
   #   link = "https://github.com/matt-dray/viz-recreation/tree/main/2021-06-08_cottonviz_spear",
   #   header = "2021-06-08"
   # )
-
+  
 )
 
 hlito <- list(
@@ -247,6 +280,7 @@ hlito <- list(
 
 ```{r card-place, echo=FALSE}
 card_list <- c(
+  squarnicode_emoji,
   softbank_emoji,
   lmb_colours,
   kierisi,
