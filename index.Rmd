@@ -1,5 +1,5 @@
 ---
-title: "faxcrayon<br>dot art<br>`r emo::ji('fax')``r emo::ji('crayon')`"
+title: "faxcrayon<br>`r emo::ji('fax')``r emo::ji('crayon')`"
 output:
   html_document:
     theme:
@@ -34,7 +34,7 @@ library(bs4cards)
 
 <center>
 <p>Recreational 'art' by [Matt Dray](https://www.matt-dray.com) made with [R](https://www.r-project.org/about.html)</p>
-<p>[ [Source](https://www.github.com/matt-dray/faxcrayon) | [RMarkdown](https://rmarkdown.rstudio.com/) | [{bs4cards}](https://bs4cards.djnavarro.net/index.html) | [Courier Prime](https://fonts.google.com/specimen/Courier+Prime?category=Monospace&preview.text=faxcrayon.art&preview.text_type=custom) | [Pages](https://pages.github.com/) ]</p>
+<p>[ [Source](https://www.github.com/matt-dray/faxcrayon) | [RMarkdown](https://rmarkdown.rstudio.com/) | [{bs4cards}](https://bs4cards.djnavarro.net/index.html) | [Courier Prime](https://fonts.google.com/specimen/Courier+Prime?category=Monospace&preview.text=faxcrayon&preview.text_type=custom) | [Pages](https://pages.github.com/) ]</p>
 </center>
 
 ```{r card-groups, include=FALSE}
